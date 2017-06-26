@@ -12,10 +12,18 @@ Para um melhor entendimento do problema a ser solucionado pelo SISB, foi necess�
 #### Distribuição Geográfica
 Software a nível nacional (Brasil), apto a atender requisições de 10, 50, 100, 1.000 e 10.000 odontólogos e armazenar dados para 5000, 100.000 e 10.000.000 de pacientes.
 
-#### Hardware Mínimo Cliente e Servidor
-Hardware cliente desktop: (a) Processador Intel ou compatível (4 núcleos); (b) RAM: 8GB DDR4 ou compatível; (c) Disco: SATA 2TB; (d) Placa de Rede PCI de 100 Mbps.
+#### Hardware Mínimo para Cliente
+Hardware cliente desktop:
+- Processador Intel ou compatível (4 núcleos); 
+- RAM: 8GB DDR4 ou compatível; 
+- Disco: SATA 2TB; 
+- Placa de Rede PCI de 100 Mbps.
 Hardware iOS: iPhone 5s (Armazenamento Interno: 16GB) ou superior
-Hardware Android: Processador Quad-core 1,2 GHz Cortex-A7, RAM: 1GB, Tela: 1280 x 720 pixels (16:9) e Armazenamento Interno: 8GB
+Hardware Android: 
+- Processador Quad-core 1,2 GHz Cortex-A7
+- RAM: 1GB
+- Tela: 1280 x 720 pixels (16:9)
+- Armazenamento Interno: 8GB
 
 #### Número de Camadas de Hardware
 - Camada cliente  
@@ -36,12 +44,12 @@ Hardware Android: Processador Quad-core 1,2 GHz Cortex-A7, RAM: 1GB, Tela: 1280 
   - Clientes iOs: Versão 10.0 ou superior.    
 - Localização dos Processos de Dados     
   - Cliente     
-    - Envia requisições e dados para o servidor  
+   - Envia requisições e dados para o servidor  
     - Recebe e formata dados processados  
   - Servidor  
-    - Recebe e processa requisições e dados enviados pelos clientes  
-    - Acessa dados do barramento SUS  
-    - Envia o resultado do processamento para o cliente  
+   - Recebe e processa requisições e dados enviados pelos clientes  
+   - Acessa dados do barramento SUS  
+   - Envia o resultado do processamento para o cliente  
 
 ## Requisitos de qualidade
 De com o documento de especificação de requisitos, a arquitetura proposta deverá atender aos requisitos de qualidade pertinentes às seguintes áreas:
