@@ -9,6 +9,7 @@ Especificar hardware smartphone
  
 ## Número de Camadas de Hardware
 - Camada cliente
+
 -- iOs, Android e navegador
 ### Camada servidor de aplicação
 - Servidor em nuvem 
