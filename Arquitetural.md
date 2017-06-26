@@ -72,3 +72,16 @@ De com o documento de especificação de requisitos, a arquitetura proposta deve
 ### Segurança
 - Backup diário, em um período de no máximo 4 horas.
 - Manutenção corretiva deve ser feita em no máximo 2 dias.
+# Arquitetura proposta
+## Visão geral em camadas
+[Descrever a imagem em proposta de arquitetura]
+
+### Visão cliente servidor
+O SISB contará com aplicações externas nas plataformas Android e iOs e um módulo específico para um sistema baseado em Web para a execução em navegadores. 
+As aplicações cliente não realizarão processamento de dados complexos localmente, irão realizar a comunicação com o servidor SISB através de um protocolo http por meio da API <nome da API>, a qual será desenvolvida levando em consideração os padrões do Google API Design Guide. A finalidade dessa API será de realizar a transição dos dados entre as aplicações cliente e o servidor SISB.
+ 
+### Clientes Android e iOS
+Tanto o cliente Android como o iOS fazem uso do protocolo http para se comunicarem com o servidor SISB, por intermédio da API SISB. As requisições processadas pelo SISB nesse contexto serão respondidas no formato XML, que será interpretado pelos aplicativos e entregues ao usuário.
+### Navegador WEB
+O navegador WEB se comunica com o SISB fazendo uso de protocolo http e faz uso do <módulo intermediário aqui [SISBWeb?]> para intermediar a comunicação entre o navegador e a API, gerando um arquivo HTML a ser usado pelo navegador.
+O módulo intermediário SISBWeb será construído fazendo uso das tecnologias HTML5, CSS3, JavaScript e Java.
