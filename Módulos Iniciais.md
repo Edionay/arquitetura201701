@@ -44,7 +44,6 @@
 - Pendências (financeiras?)
 - Botão de pânico
 - Acesso à agenda (on-line)
-
 - Manter registro de consultas realizadas
 - Manter registro de consultas a serem realizadas e canceladas
 - Realizar agendamento de consultas
@@ -80,13 +79,13 @@
 - Relatórios
   - Gerar, exibir e armazenar relatórios de &quot;todos os dentistas&quot;(??? com relação a que?? por que aspas??)
   
-# Gerar, exibir e armazenar relatórios baseados na remuneração do corpo clínico
+## Gerar, exibir e armazenar relatórios baseados na remuneração do corpo clínico
 - Comunicação Interna
   - Responsável por manter a comunicação entre os componentes do corpo clínico e colaboradores deste, via texto e/ou voz.
 
-# Dados
+## Dados
 - Armazenar NFe
 
-# Sistemas Externos
+## Sistemas Externos
 - Integração com Cielo e Pagseguro
 - Integração com UniOdonto
