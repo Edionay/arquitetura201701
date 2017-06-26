@@ -18,30 +18,30 @@ Hardware iOS: iPhone 5s (Armazenamento Interno: 16GB) ou superior
 Hardware Android: Processador Quad-core 1,2 GHz Cortex-A7, RAM: 1GB, Tela: 1280 x 720 pixels (16:9) e Armazenamento Interno: 8GB
 
 #### Número de Camadas de Hardware
-- Camada cliente
--- iOs
--- Android
--- Navegador Web
+- Camada cliente  
+  - iOs  
+  - Android  
+  - Navegador Web  
 
-- Camada servidor de aplicação
--- Servidor em nuvem
-- Camada de dados externos
--- Barramento SUS
-- Definição da Plataforma
--- Navegadores web (últimas duas versões dos navegadores Google Chrome, Mozilla Firefox, Edge e Safari)
--- Servidor de aplicação
--- Execução em servidor baseado em nuvem
--- TomCat com Apache
--- Clientes Android: Versão 4.1 ou superior.
--- Clientes iOs: Versão 10.0 ou superior.
-- Localização dos Processos de Dados 
--- Cliente
---- Envia requisições e dados para o servidor
---- Recebe e formata dados processados
--- Servidor
---- Recebe e processa requisições e dados enviados pelos clientes
---- Acessa dados do barramento SUS
---- Envia o resultado do processamento para o cliente
+- Camada servidor de aplicação  
+  - Servidor em nuvem   
+- Camada de dados externos   
+  - Barramento SUS   
+- Definição da Plataforma    
+  - Navegadores web (últimas duas versões dos navegadores Google Chrome, Mozilla Firefox, Edge e Safari)    
+  - Servidor de aplicação    
+  - Execução em servidor baseado em nuvem   
+  - TomCat com Apache  
+  - Clientes Android: Versão 4.1 ou superior.    
+  - Clientes iOs: Versão 10.0 ou superior.    
+- Localização dos Processos de Dados     
+  - Cliente     
+    - Envia requisições e dados para o servidor  
+    - Recebe e formata dados processados  
+  - Servidor  
+    - Recebe e processa requisições e dados enviados pelos clientes  
+    - Acessa dados do barramento SUS  
+    - Envia o resultado do processamento para o cliente  
 
 ## Requisitos de qualidade
 De com o documento de especificação de requisitos, a arquitetura proposta deverá atender aos requisitos de qualidade pertinentes às seguintes áreas:
