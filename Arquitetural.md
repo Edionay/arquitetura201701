@@ -42,3 +42,33 @@ Hardware Android: Processador Quad-core 1,2 GHz Cortex-A7, RAM: 1GB, Tela: 1280 
 --- Recebe e processa requisições e dados enviados pelos clientes
 --- Acessa dados do barramento SUS
 --- Envia o resultado do processamento para o cliente
+
+## Requisitos de qualidade
+De com o documento de especificação de requisitos, a arquitetura proposta deverá atender aos requisitos de qualidade pertinentes às seguintes áreas:
+
+### Portabilidade
+- O SISB deve tanto fazer uso quanto produzir artefatos livres (sem pagamento de royalties)
+- O SISB permite a importação/exportação de dados geridos por ele com base em arquétipos a serem disponibilizados publicamente. 
+
+### Manutenibilidade
+- O SISB usufrui de serviços oferecidos por "nuvens" públicas.
+- O SISB deve oferecer mecanismos para facilitar o seu uso por mais de uma língua ou cultura. Especificamente: estar preparado para internacionalização e localização
+- O cycle time do SISB deve ser de, no máximo, 2 horas.
+
+### Desempenho
+- O SISB oferece suas funcionalidades e atender requisitos de qualidade usando hardware "convencional" (commodity hardware). A configuração de entrada são: (a) CPU: processador Intel ou compatível (4 núcleos); (b) RAM: 8GB DDR4 ou compatível; (c) Disco: SATA 2TB; (d) Placa de Rede PCI de 100 Mpbs.
+- Execução pode ser em Windows, Linux ou MacOS.
+- A execução pode ser feita utilizando os navegadores web: google chrome, mozilla firefox, safari e edge.
+- Não poderá ficar indisponível por no máximo 2 horas por dia.
+- O SISB deve ser capaz de se manter em operação por um período ininterrupto de 30 dias.
+- O SISB deve estar apto a atender requisições de 10, 50, 100, 1.000 e 10.000 odontólogos.
+- O SISB deve estar apto para armazenar dados para 5000, 100.000 e 10.000.000 de pacientes.
+
+### Confiabilidade
+- O SISB deve estar em conformidade com o Manual de Certificação da SBIS (NGS2)(http://sbis.org.br/certificacao/Manual_Certificacao_SBIS-CFM_2016_v4-2.pdf). - A interação de clientes (interface com o usuário) com o SISB e os serviços oferecidos serão projetados em conformidade com as diretrizes contidas no API Design Guid.(https://cloud.google.com/apis/design/)
+- O SISB estar em conformidade com os padrões adotado pelo Brasil para interoperabilidade semântica
+- O SISB interage com os serviços do barramento do SUS: CNS, CNES, SIGTAP, e-SUS AB e Horus.
+
+### Segurança
+- Backup diário, em um período de no máximo 4 horas.
+- Manutenção corretiva deve ser feita em no máximo 2 dias.
