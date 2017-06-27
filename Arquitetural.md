@@ -119,7 +119,12 @@ Tanto o cliente Android como o iOS fazem uso do protocolo http para se comunicar
 O navegador WEB se comunica com o SISB fazendo uso de protocolo http e faz, através da API, requisições que passam pelo SISB-WEB e então é encaminhada e processada pelo SISB. O SISB, por sua vez, processa a requisição e devolve para o SISB-WEB.
 O módulo SISB-WEB será construído fazendo uso das tecnologias HTML5, CSS3, JavaScript e Java.
 
-(Affonso)
+# Visão de implantação
+[Visão de implantação](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/Vis%C3%A3o%20de%20Implanta%C3%A7%C3%A3o.png)
+
+O aplicativo SISB para android e iOs serão instalados nos respectivos dispositivos.
+O SISB será instalado em uma máquina Amazon AWS e executado pelo servidor de aplicação TomCat executando sobre o Apache (todos instalados no AWS). O SISB-WEB também está na AWS e, assim como o SISB, será requisitado pelo TomCat. 
+A aplicação em sua versão Web fará uso de navegadores Web compatíveis com tecnologias HTML5, CSS3 e JavaScript e receberá dados da aplicação SISB-WEB que também será instalada em conjunto com o SISB.
 
 # Descrição das responsabilidades dos módulos do SISB
 (Imagem)
