@@ -52,7 +52,7 @@ Hardware Android:
    - Envia o resultado do processamento para o cliente  
 
 ## Requisitos de qualidade
-De com [o documento de especificação de requisitos](https://github.com/kyriosdata/sisb/blob/master/info/Requisitos.md), a arquitetura proposta deverá atender aos requisitos de qualidade pertinentes às seguintes áreas:
+De acordo com [o documento de especificação de requisitos](https://github.com/kyriosdata/sisb/blob/master/info/Requisitos.md), a arquitetura proposta deverá atender aos requisitos de qualidade pertinentes às seguintes áreas:
 
 ### Portabilidade
 - O SISB deve tanto fazer uso quanto produzir artefatos livres (sem pagamento de royalties)
@@ -86,8 +86,12 @@ De com [o documento de especificação de requisitos](https://github.com/kyriosd
 ![Camadas](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/VIs%C3%A3o%20geral%20em%20camadas.png?raw=true)
 [Descrição da imagem em Proposta de Arquitetura]
 
-### Visão cliente servidor
-O SISB contará com aplicações externas nas plataformas Android e iOs e um módulo específico para um sistema baseado em Web para a execução em navegadores. 
+Baseado em um esquema de Servidor-Web, o SISB contará com **3 principais clientes**: Android, iOs e navegador Web. Estes clientes terão um papel somente de  enviarão requisições através da API do SISB.
+Baseado em uma arquitetura de três camadas, O SISB contará contará com uma camada de apresentação contendo a API de comunicação com clientes, a camada de negócio contendo os módulos principais, que também se comunicará com serviços externos e uma camada de persistência responsável pela manipulação e tratamento dos dados pertinentes ao sistema principal.
+
+## Visão cliente servidor
+
+O SISB contará com aplicações externas nas plataformas Android e iOs e um módulo específico para um sistema baseado em Web, o ***SISB-WEB*** para a execução em navegadores. 
 As aplicações cliente não realizarão processamento de dados complexos localmente, irão realizar a comunicação com o servidor SISB através de um protocolo http por meio da API <nome da API>, a qual será desenvolvida levando em consideração os padrões do Google API Design Guide. A finalidade dessa API será de realizar a transição dos dados entre as aplicações cliente e o servidor SISB.
  
 ### Clientes Android e iOS
