@@ -218,27 +218,37 @@ Visando cumprir a exigência de agilidade na resposta, que foi estipulada com um
 
 ## Chat
 ![Chat](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/chat.png)
+
 Os operadores do sistema (atendentes) possuem um sistema de comunicação interno. Esse sistema é implementado por meio de uma interface gráfica, que usufrui da estrutura de um chat, integrado ao sistema. Tal comunicação é validada por meio do serviço externo Auth0 e em seguida, a mensagem é enviada ao serviço externo “Serviço de Mensagem”, onde a mesma será armazenada e encaminhada ao seu destino dentro da rede interna.
 
 ## Alerta
 ![Alerta](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/intera%C3%A7%C3%A3o-banc%C3%A1ria.png)
+
 A partir da lista de consultas, a operação de alerta, varre as consultas em busca das quais estão marcadas para daqui 3 dias a partir do dia corrente.
 A partir das informações da cada consulta especificada, o sistema de alerta se conecta  com a interface de comunicação com o e-mail institucional  e com o número oficial de telefone do SISB, que envia um e-mail de alerta e uma mensagem sms e\ou no whatsapp para cada paciente correspondente às consultas referenciadas na pesquisa de alerta.
 Após feita a notificação, o sistema de alerta, se conecta com o sistema de comunicação, que por sua vez, interage com a interface de comunicação de serviço externo Auth0, que faz a persistência das notificações exercidas no dia.           
 
 ## Interação-bancária
 ![Bancos](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/intera%C3%A7%C3%A3o-banc%C3%A1ria.png)
+
 Quando uma nova consulta é gerada o sistema realiza uma solicitação de acesso à interface de comunicação com o sistema bancário, o qual gera uma solicitação de pagamento que será enviada para o controlador de finanças.
 Quando a solicitação chega ao setor Financeiro uma nova solicitação é gerada, essa solicitação tem a finalidade de providenciar a interação entre o SISB e o gerador de NFE.
 
 ## Atualização de Prontuário
 ![Prontuário](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/prontu%C3%A1rio%20att.png)
+
 O odontólogo acessa o portal do profissional da saúde, do servidor web por meio de uma conexão TCP\IP, onde acessa as informações dos pacientes inferidos a ele.
 O cadastro dos pacientes, advém da comunicação com o barramento BSUS que o conecta com o banco de dados do SUS. 
 a situação dos pacientes do SISB,    
 
 
+# Referências
 
-
-
+[ConOps](https://github.com/kyriosdata/sisb/blob/master/ConOps.md)
+[TomCat](http://tomcat.apache.org/)
+[Microsoft Application Architecture Guide](https://msdn.microsoft.com/en-us/library/ff650706.aspx)
+[API Design Guide](https://cloud.google.com/apis/design/)
+[Format.js](https://formatjs.io/)
+[Plano da Disciplina](inf.ufg.br/~fabio/arquitetura)
+[Definição do Problema](github.com/kyriosdata/sisb)
 
