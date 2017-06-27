@@ -244,11 +244,11 @@ a situação dos pacientes do SISB,
 
 # Referências
 
-[ConOps](https://github.com/kyriosdata/sisb/blob/master/ConOps.md)
-[TomCat](http://tomcat.apache.org/)
-[Microsoft Application Architecture Guide](https://msdn.microsoft.com/en-us/library/ff650706.aspx)
-[API Design Guide](https://cloud.google.com/apis/design/)
-[Format.js](https://formatjs.io/)
-[Plano da Disciplina](inf.ufg.br/~fabio/arquitetura)
-[Definição do Problema](github.com/kyriosdata/sisb)
+[ConOps](https://github.com/kyriosdata/sisb/blob/master/ConOps.md)  
+[TomCat](http://tomcat.apache.org/)   
+[Microsoft Application Architecture Guide](https://msdn.microsoft.com/en-us/library/ff650706.aspx)  
+[API Design Guide](https://cloud.google.com/apis/design/)  
+[Format.js](https://formatjs.io/)  
+[Plano da Disciplina](inf.ufg.br/~fabio/arquitetura)  
+[Definição do Problema](github.com/kyriosdata/sisb)  
 
