@@ -123,77 +123,78 @@ O módulo SISB-WEB será construído fazendo uso das tecnologias HTML5, CSS3, Ja
 
 # Descrição das responsabilidades dos módulos do SISB
 (Imagem)
+
 - Agendamento
--- Manter registros das consultas realizadas: Guarda um histórico de cada consulta realizada, contendo as informaçõe sobre: o respectivo paciente da consulta, data da(s) consulta(s), número de retorno(s), tipo de tratamento e odontólogo responsável pelo atendimento 
--- Sub módulo - Consulta: Responsável por concentrar os dados referentes à consulta do paciente no sistema
--- Manter registros das consultas marcadas e canceladas
--- Guarda um histórico das consultas que foram marcadas e canceladas, contendo as informações: paciente, data da consulta e odontólogo responsável.
--- Realizar agendamento de consultas: Permite ao paciente agendar uma consulta odontológica, por meio do registro único de saúde.
--- Cancelar consultas: Permite ao paciente cancelar uma consulta.
--- Reagendamento de consultas: Permite ao paciente solicitar uma nova data para uma consulta.
--- Ser capaz de informar a disponibilidade do profissional de saúde: Permite que  o paciente verifique a disponibilidade de um determinado odontólogo, em um período específico. 
--- Realizar agendamento de retorno: Permite ao paciente, marcar uma consulta de retorno para o dia mais adequado com o mesmo odontólogo.
--- Cancelamento de Retorno: Permite ao paciente, cancelar uma consulta de retorno.
--- Emissão de relatórios sobre consultas: Permite a emissão com os dados de uma consulta até o dado momento.
+  - Manter registros das consultas realizadas: Guarda um histórico de cada consulta realizada, contendo as informaçõe sobre: o respectivo paciente da consulta, data da(s) consulta(s), número de retorno(s), tipo de tratamento e odontólogo responsável pelo atendimento 
+  - Sub módulo - Consulta: Responsável por concentrar os dados referentes à consulta do paciente no sistema
+  - Manter registros das consultas marcadas e canceladas
+  - Guarda um histórico das consultas que foram marcadas e canceladas, contendo as informações: paciente, data da consulta e odontólogo responsável.
+  - Realizar agendamento de consultas: Permite ao paciente agendar uma consulta odontológica, por meio do registro único de saúde.
+  - Cancelar consultas: Permite ao paciente cancelar uma consulta.
+  - Reagendamento de consultas: Permite ao paciente solicitar uma nova data para uma consulta.
+  - Ser capaz de informar a disponibilidade do profissional de saúde: Permite que  o paciente verifique a disponibilidade de um determinado odontólogo, em um período específico. 
+  - Realizar agendamento de retorno: Permite ao paciente, marcar uma consulta de retorno para o dia mais adequado com o mesmo odontólogo.
+  - Cancelamento de Retorno: Permite ao paciente, cancelar uma consulta de retorno.
+  - Emissão de relatórios sobre consultas: Permite a emissão com os dados de uma consulta até o dado momento.
 
 - Paciente
--- Informações pessoais do paciente: Como nome, endereço, telefone, CPF, etc...
+  - Informações pessoais do paciente: Como nome, endereço, telefone, CPF, etc...
 Interface de comunicação com o Banco de Dados, tendo as seguintes funcionalidades: Realizar conexão com o BSUS, Requisição de Informações do BSUS e Atualização de dados dos pacientes do BSUS
--- Uma lista de atendimentos pendentes do paciente em questão, sob as seguintes especificações: Informações sobre a data de solicitação e a data marcada para a consulta, Informações sobre o prontuário e sobre o quadro do paciente e Informações sobre o profissional que o atendeu/atenderá
--- Sub módulo - Relógio: Com a função de gerenciar o tempo de espera e podendo ser usado para gerenciamento de filas de espera e Data de aniversário do paciente
--- Plano utilizado pelo paciente
--- Pendências financeiras
+  - Uma lista de atendimentos pendentes do paciente em questão, sob as seguintes especificações: Informações sobre a data de solicitação e a data marcada para a consulta, Informações sobre o prontuário e sobre o quadro do paciente e Informações sobre o profissional que o atendeu/atenderá
+  - Sub módulo - Relógio: Com a função de gerenciar o tempo de espera e podendo ser usado para gerenciamento de filas de espera e Data de aniversário do paciente
+  - Plano utilizado pelo paciente
+  - Pendências financeiras
 
 - Estoque
--- Controle de inventário de medicamentos e utilitários
--- Sub módulo - Produto: Categoria de modelo que engloba medicamentos e utilitários e Responsável por manter informações desses itens no inventário
--- Cadastro de produtos
--- Atualização de produtos
--- Seleção de produtos
--- Controle de categorias de produtos
--- Manutenção de registro de fornecedores
--- Sub módulo - Fornecedor: Modelo que define dentro do contexto do sistema um fornecedor de produtos
--- Emissão de relatórios sobre entradas e saídas de produtos
+  - Controle de inventário de medicamentos e utilitários
+  - Sub módulo - Produto: Categoria de modelo que engloba medicamentos e utilitários e Responsável por manter informações desses itens no inventário
+  - Cadastro de produtos
+  - Atualização de produtos
+  - Seleção de produtos
+  - Controle de categorias de produtos
+  - Manutenção de registro de fornecedores
+  - Sub módulo - Fornecedor: Modelo que define dentro do contexto do sistema um fornecedor de produtos
+  - Emissão de relatórios sobre entradas e saídas de produtos
 
 - Recursos Humanos
--- Sub módulo - Profissional de Saúde: Representação do Dentista ou Ajudante que compõe o corpo clínico do estabelecimento, Concentra informações pessoais destes profissionaise e Registra as competências deste profissional
--- Emissão de relatórios de produtividade do profissional, contendo: Horas trabalhadas e Pacientes atendidos
+  - Sub módulo - Profissional de Saúde: Representação do Dentista ou Ajudante que compõe o corpo clínico do estabelecimento, Concentra informações pessoais destes profissionaise e Registra as competências deste profissional
+  - Emissão de relatórios de produtividade do profissional, contendo: Horas trabalhadas e Pacientes atendidos
 
 - Relatórios
--- Mantém armazenados relatórios gerados pelo corpo clínico sobre pacientes
--- Mantém armazenados relatórios sobre a remuneração do corpo clínico
--- Mantém relatórios sobre o controle de itens em estoque
--- Mantém relatórios sobre a produtividade do membros do corpo do clínico
--- Gera relatórios sobre pacientes redigidos pelo corpo clínico
--- Gera relatórios relacionados a remuneração do corpo clínico
--- Gera relatórios sobre as entradas e saídas de produto do estoque
--- Gera relatórios sobre a produtividade dos diversos membros do corpo clínico
--- Sub-módulo - Estatísticas: Registra dados de produtividade de membros do corpo clínico, Mantém dados de produtividade de membros do corpo clínico, Gera estatísticas baseadas nos dados previamente armazenados de desempenho do corpo clínice e Gera o Ranking entre os dentistas e outros membros do corpo clínico usando por base as estatísticas
+  - Mantém armazenados relatórios gerados pelo corpo clínico sobre pacientes
+  - Mantém armazenados relatórios sobre a remuneração do corpo clínico
+  - Mantém relatórios sobre o controle de itens em estoque
+  - Mantém relatórios sobre a produtividade do membros do corpo do clínico
+  - Gera relatórios sobre pacientes redigidos pelo corpo clínico
+  - Gera relatórios relacionados a remuneração do corpo clínico
+  - Gera relatórios sobre as entradas e saídas de produto do estoque
+  - Gera relatórios sobre a produtividade dos diversos membros do corpo clínico
+  - Sub-módulo - Estatísticas: Registra dados de produtividade de membros do corpo clínico, Mantém dados de produtividade de membros do corpo clínico, Gera estatísticas baseadas nos dados previamente armazenados de desempenho do corpo clínice e Gera o Ranking entre os dentistas e outros membros do corpo clínico usando por base as estatísticas
 
 - Sistemas Externos
--- Responsável pela integração entre os diversos sistemas externos com os quais o SISB se comunica e utiliza.
---- O módulo financeiro utiliza a API-Caixa do Banco para efetuar pagamento de boletos e o Bar_Convênios para o pagamento de convênios.
---- O módulo agendamento usa o Unimed-A200 no módulo Planos-de-saúde para realizar o agendamento de futuras consultas.
---- O módulo controle faz uso do OAuth2 no módulo Segurança, este que por sua vez usa o módulo Negócio, garantindo assim a proteção da aplicação.
+  - Responsável pela integração entre os diversos sistemas externos com os quais o SISB se comunica e utiliza.
+   - O módulo financeiro utiliza a API-Caixa do Banco para efetuar pagamento de boletos e o Bar_Convênios para o pagamento de convênios.
+   - O módulo agendamento usa o Unimed-A200 no módulo Planos-de-saúde para realizar o agendamento de futuras consultas.
+   - O módulo controle faz uso do OAuth2 no módulo Segurança, este que por sua vez usa o módulo Negócio, garantindo assim a proteção da aplicação.
 
 - Financeiro  
--- Repassa o capital para a gerência do estoque: Transfere o capital do governo, para a execução das atividades de gerência do estoque.
--- Repassa o capital para os recursos humanos: Transfere o capital do governo, para a execução das atividades de gerência dos recursos humanos.
--- Transfere o valor das taxas para o banco: Repassa os valores obtidos pela prestação de serviço do SISB, para a conta no banco
--- Presta contas: Emite relatórios das transações efetuadas dentro do SISB.
--- Realiza orçamentos para aquisições de material e pessoal: Responsável por fazer orçamentos pertinentes a compra de material e contratação de pessoal.
+  - Repassa o capital para a gerência do estoque: Transfere o capital do governo, para a execução das atividades de gerência do estoque.
+  - Repassa o capital para os recursos humanos: Transfere o capital do governo, para a execução das atividades de gerência dos recursos humanos.
+  - Transfere o valor das taxas para o banco: Repassa os valores obtidos pela prestação de serviço do SISB, para a conta no banco
+  - Presta contas: Emite relatórios das transações efetuadas dentro do SISB.
+  - Realiza orçamentos para aquisições de material e pessoal: Responsável por fazer orçamentos pertinentes a compra de material e contratação de pessoal.
 
 - Comunicação   
--- Alertar paciente sobre retorno via e-mail automaticamente: Envia um email para o paciente, alertando quanto ao retorno de sua consulta, com 3(três) dias de antecedência.
--- Alertar paciente sobre retorno via WhatsApp: Envia uma mensagem via whatsapp ao paciente, alertando quanto ao retorno de sua consulta, com 3(três) dias de antecedência.
+  - Alertar paciente sobre retorno via e-mail automaticamente: Envia um email para o paciente, alertando quanto ao retorno de sua consulta, com 3(três) dias de antecedência.
+  - Alertar paciente sobre retorno via WhatsApp: Envia uma mensagem via whatsapp ao paciente, alertando quanto ao retorno de sua consulta, com 3(três) dias de antecedência.
 
 - Pessoa 
--- Guarda informações sobre pacientes: Contém os dados e metadados sobre os clientes advindos do barramento BSUS.
--- Guarda informações sobre instituições: Contém os dados e metadados sobre a instituições que possuem convênio com o SISB. 
+  - Guarda informações sobre pacientes: Contém os dados e metadados sobre os clientes advindos do barramento BSUS.
+  - Guarda informações sobre instituições: Contém os dados e metadados sobre a instituições que possuem convênio com o SISB. 
 
 - Atenção à Saúde
--- Realiza o cadastro dos pacientes do SUS no sistema local: Classifica os pacientes utilizando o CID ( Código Internacional de Doenças).
--- Contabiliza as solicitações de exames e medicamentos vindas do corpo clínico: Essas solicitações por sua vez são repassadas ao estoque.
+  - Realiza o cadastro dos pacientes do SUS no sistema local: Classifica os pacientes utilizando o CID ( Código Internacional de Doenças).
+  - Contabiliza as solicitações de exames e medicamentos vindas do corpo clínico: Essas solicitações por sua vez são repassadas ao estoque.
 
 
 
