@@ -125,6 +125,7 @@ O módulo SISB-WEB será construído fazendo uso das tecnologias HTML5, CSS3, Ja
 (Imagem)
 
 - Agendamento
+![Agendamento](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/agendamento.png)
   - Manter registros das consultas realizadas: Guarda um histórico de cada consulta realizada, contendo as informaçõe sobre: o respectivo paciente da consulta, data da(s) consulta(s), número de retorno(s), tipo de tratamento e odontólogo responsável pelo atendimento 
   - Sub módulo - Consulta: Responsável por concentrar os dados referentes à consulta do paciente no sistema
   - Manter registros das consultas marcadas e canceladas
@@ -138,6 +139,7 @@ O módulo SISB-WEB será construído fazendo uso das tecnologias HTML5, CSS3, Ja
   - Emissão de relatórios sobre consultas: Permite a emissão com os dados de uma consulta até o dado momento.
 
 - Paciente
+
   - Informações pessoais do paciente: Como nome, endereço, telefone, CPF, etc...
 Interface de comunicação com o Banco de Dados, tendo as seguintes funcionalidades: Realizar conexão com o BSUS, Requisição de Informações do BSUS e Atualização de dados dos pacientes do BSUS
   - Uma lista de atendimentos pendentes do paciente em questão, sob as seguintes especificações: Informações sobre a data de solicitação e a data marcada para a consulta, Informações sobre o prontuário e sobre o quadro do paciente e Informações sobre o profissional que o atendeu/atenderá
@@ -177,7 +179,8 @@ Interface de comunicação com o Banco de Dados, tendo as seguintes funcionalida
    - O módulo agendamento usa o Unimed-A200 no módulo Planos-de-saúde para realizar o agendamento de futuras consultas.
    - O módulo controle faz uso do OAuth2 no módulo Segurança, este que por sua vez usa o módulo Negócio, garantindo assim a proteção da aplicação.
 
-- Financeiro  
+- Financeiro
+![Financeiro](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/Financeiro.jpg)
   - Repassa o capital para a gerência do estoque: Transfere o capital do governo, para a execução das atividades de gerência do estoque.
   - Repassa o capital para os recursos humanos: Transfere o capital do governo, para a execução das atividades de gerência dos recursos humanos.
   - Transfere o valor das taxas para o banco: Repassa os valores obtidos pela prestação de serviço do SISB, para a conta no banco
