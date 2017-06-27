@@ -84,18 +84,22 @@ De acordo com [o documento de especificação de requisitos](https://github.com/
 # Arquitetura proposta
 ## Visão geral em camadas
 ![Camadas](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/VIs%C3%A3o%20geral%20em%20camadas.png?raw=true)
-[Descrição da imagem em Proposta de Arquitetura]
 
 Baseado em um esquema de Servidor-Web, o SISB contará com **3 principais clientes**: Android, iOs e navegador Web. Estes clientes terão um papel somente de  enviarão requisições através da API do SISB.
 Baseado em uma arquitetura de três camadas, O SISB contará contará com uma camada de apresentação contendo a API de comunicação com clientes, a camada de negócio contendo os módulos principais, que também se comunicará com serviços externos e uma camada de persistência responsável pela manipulação e tratamento dos dados pertinentes ao sistema principal.
 
-## Visão cliente servidor
+### Visão cliente servidor
+![CLiente-servidor](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/Servidor%20web.png)
 
 O SISB contará com aplicações externas nas plataformas Android e iOs e um módulo específico para um sistema baseado em Web, o ***SISB-WEB*** para a execução em navegadores. 
-As aplicações cliente não realizarão processamento de dados complexos localmente, irão realizar a comunicação com o servidor SISB através de um protocolo http por meio da API <nome da API>, a qual será desenvolvida levando em consideração os padrões do Google API Design Guide. A finalidade dessa API será de realizar a transição dos dados entre as aplicações cliente e o servidor SISB.
- 
+As aplicações cliente não realizarão processamento de dados complexos localmente, irão realizar a comunicação com o servidor SISB através de um protocolo http por meio da **API SISB**, a qual será desenvolvida levando em consideração os padrões do [Google API Design Guide](https://cloud.google.com/apis/design/).
+Usando a linguagem de programação Java por meio da tecnologia JSP, o SISB sera constrído e terá suas requisições de clientes externos gerenciados por um servidor TurnKey Tomcat on Apache. O TomCat redirecionará as requisições dos clientes para a API SISB e o processamento será realizado no SISB. Particularmente as requisições feitas pelo cliente Navegador Web serão direcionadas para o SISB-WEB antes de chegarem ao processamento exato no SISB.
+
 ### Clientes Android e iOS
-Tanto o cliente Android como o iOS fazem uso do protocolo http para se comunicarem com o servidor SISB, por intermédio da API SISB. As requisições processadas pelo SISB nesse contexto serão respondidas no formato XML, que será interpretado pelos aplicativos e entregues ao usuário.
+Tanto o cliente Android como o iOS fazem uso do protocolo http para se comunicarem com o SISB, por intermédio da API SISB. As requisições processadas pelo SISB nesse contexto serão respondidas no formato XML, que será interpretado pelos aplicativos e entregues ao usuário.
+
 ### Navegador WEB
-O navegador WEB se comunica com o SISB fazendo uso de protocolo http e faz uso do <módulo intermediário aqui [SISBWeb?]> para intermediar a comunicação entre o navegador e a API, gerando um arquivo HTML a ser usado pelo navegador.
-O módulo intermediário SISBWeb será construído fazendo uso das tecnologias HTML5, CSS3, JavaScript e Java.
+O navegador WEB se comunica com o SISB fazendo uso de protocolo http e faz, através da API, requisições que passam pelo SISB-WEB e então é encaminhada e processada pelo SISB. O SISB, por sua vez, processa a requisição e devolve para o SISB-WEB.
+O módulo SISB-WEB será construído fazendo uso das tecnologias HTML5, CSS3, JavaScript e Java.
+
+
