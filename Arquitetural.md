@@ -127,7 +127,6 @@ O SISB será instalado em uma máquina Amazon AWS e executado pelo servidor de a
 A aplicação em sua versão Web fará uso de navegadores Web compatíveis com tecnologias HTML5, CSS3 e JavaScript e receberá dados da aplicação SISB-WEB que também será instalada em conjunto com o SISB.
 
 # Descrição das responsabilidades dos módulos do SISB
-(Imagem)
 
 ## Agendamento
 ![Agendamento](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/agendamento.png)
