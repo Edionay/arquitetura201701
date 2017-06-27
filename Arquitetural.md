@@ -52,7 +52,7 @@ Hardware Android:
    - Envia o resultado do processamento para o cliente  
 
 ## Requisitos de qualidade
-De com o documento de especificação de requisitos, a arquitetura proposta deverá atender aos requisitos de qualidade pertinentes às seguintes áreas:
+De com [o documento de especificação de requisitos](https://github.com/kyriosdata/sisb/blob/master/info/Requisitos.md), a arquitetura proposta deverá atender aos requisitos de qualidade pertinentes às seguintes áreas:
 
 ### Portabilidade
 - O SISB deve tanto fazer uso quanto produzir artefatos livres (sem pagamento de royalties)
@@ -73,13 +73,14 @@ De com o documento de especificação de requisitos, a arquitetura proposta deve
 - O SISB deve estar apto para armazenar dados para 5000, 100.000 e 10.000.000 de pacientes.
 
 ### Confiabilidade
-- O SISB deve estar em conformidade com o Manual de Certificação da SBIS (NGS2)(http://sbis.org.br/certificacao/Manual_Certificacao_SBIS-CFM_2016_v4-2.pdf). - A interação de clientes (interface com o usuário) com o SISB e os serviços oferecidos serão projetados em conformidade com as diretrizes contidas no API Design Guid.(https://cloud.google.com/apis/design/)
+- O SISB deve estar em conformidade com o [Manual de Certificação da SBIS (NGS2)](http://sbis.org.br/certificacao/Manual_Certificacao_SBIS-CFM_2016_v4-2.pdf). - A interação de clientes (interface com o usuário) com o SISB e os serviços oferecidos serão projetados em conformidade com as diretrizes contidas no [API Design Guid](https://cloud.google.com/apis/design/).
 - O SISB estar em conformidade com os padrões adotado pelo Brasil para interoperabilidade semântica
 - O SISB interage com os serviços do barramento do SUS: CNS, CNES, SIGTAP, e-SUS AB e Horus.
 
 ### Segurança
 - Backup diário, em um período de no máximo 4 horas.
 - Manutenção corretiva deve ser feita em no máximo 2 dias.
+
 # Arquitetura proposta
 ## Visão geral em camadas
 ![Camadas](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/VIs%C3%A3o%20geral%20em%20camadas.png?raw=true)
