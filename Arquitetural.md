@@ -153,6 +153,7 @@ Interface de comunicação com o Banco de Dados, tendo as seguintes funcionalida
  - Pendências financeiras
 
 ## Estoque
+![Estoque](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/estoqur.png)
  - Controle de inventário de medicamentos e utilitários
  - Sub módulo - Produto: Categoria de modelo que engloba medicamentos e utilitários e Responsável por manter informações desses itens no inventário
  - Cadastro de produtos
@@ -164,6 +165,7 @@ Interface de comunicação com o Banco de Dados, tendo as seguintes funcionalida
  - Emissão de relatórios sobre entradas e saídas de produtos
 
 ## Recursos Humanos
+![RH](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/Aten%C3%A7%C3%A3o%20%C3%A0%20Sa%C3%BAde.png)
  - Sub módulo - Profissional de Saúde: Representação do Dentista ou Ajudante que compõe o corpo clínico do estabelecimento, Concentra informações pessoais destes profissionaise e Registra as competências deste profissional
  - Emissão de relatórios de produtividade do profissional, contendo: Horas trabalhadas e Pacientes atendidos
 
@@ -201,6 +203,7 @@ Interface de comunicação com o Banco de Dados, tendo as seguintes funcionalida
  - Guarda informações sobre instituições: Contém os dados e metadados sobre a instituições que possuem convênio com o SISB. 
 
 ## Atenção à Saúde
+![Saúde](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/Aten%C3%A7%C3%A3o%20%C3%A0%20Sa%C3%BAde.png)
  - Realiza o cadastro dos pacientes do SUS no sistema local: Classifica os pacientes utilizando o CID ( Código Internacional de Doenças).
  - Contabiliza as solicitações de exames e medicamentos vindas do corpo clínico: Essas solicitações por sua vez são repassadas ao estoque.
  
