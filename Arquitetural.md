@@ -81,6 +81,23 @@ De acordo com [o documento de especificação de requisitos](https://github.com/
 - Backup diário, em um período de no máximo 4 horas.
 - Manutenção corretiva deve ser feita em no máximo 2 dias.
 
+# Disposição do sistema
+![Conceito do sistema](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/Conceito%20do%20Sistema.png)
+
+O SISB terá módulos que atendem demandas a usuários do tipo administrador do sistema, odontólogo e recepcionista (lado esquerdo da figura acima). Apesar de não estar presente na figura, usuários do tipo paciente serão gerenciados e notificados pelo sistema, por meios externos, de assuntos de seu interesse . Além do desenvolvimento de suas funções nativas, o SISB fará uso e integração com serviços externos (lado direito da figura acima). A tabela abaixo descreve os papéis mencionados na figura acima.
+
+Uso | Descrição
+------------ | -------------
+Odontólogo | Poderá verificar e gerar informação de pacientes
+Administrador | Responsável pela manutenção do SISB e também pelo restabelecimento de seu funcionamento em caso de falha. Ainda possui a função de cadastrar novos usuários e seus papéis
+Recepcionista | Poderá realizar agendamento de consultas além de realizar atividades pertinentes ao financeiro entre outros
+Barramento SUS | Barramento com o qual o SISB deverá interagir para receber e enviar informações
+NFe | Deverá emitir a nota fiscal eletrônica
+AWS S3 | Serviço no qual o SISB será instalado e responsável pelo backup e processamento de dados, os quais também serão realizados e armazenados na nuvem
+Bancos | Deverá realizar os pagamentos e controle de caixa
+Operadoras de Cartão | Deverá receber pagamentos de serviços realizados via cartões de crédito ou débito
+
+
 # Arquitetura proposta
 ## Visão geral em camadas
 ![Camadas](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/VIs%C3%A3o%20geral%20em%20camadas.png?raw=true)
