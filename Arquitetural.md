@@ -120,7 +120,7 @@ O navegador WEB se comunica com o SISB fazendo uso de protocolo http e faz, atra
 O módulo SISB-WEB será construído fazendo uso das tecnologias HTML5, CSS3, JavaScript e Java.
 
 # Visão de implantação
-[Visão de implantação](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/Vis%C3%A3o%20de%20Implanta%C3%A7%C3%A3o.png)
+![Visão de implantação](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/Vis%C3%A3o%20de%20Implanta%C3%A7%C3%A3o.png)
 
 O aplicativo SISB para android e iOs serão instalados nos respectivos dispositivos.
 O SISB será instalado em uma máquina Amazon AWS e executado pelo servidor de aplicação TomCat executando sobre o Apache (todos instalados no AWS). O SISB-WEB também está na AWS e, assim como o SISB, será requisitado pelo TomCat. 
@@ -203,6 +203,38 @@ Interface de comunicação com o Banco de Dados, tendo as seguintes funcionalida
 ## Atenção à Saúde
  - Realiza o cadastro dos pacientes do SUS no sistema local: Classifica os pacientes utilizando o CID ( Código Internacional de Doenças).
  - Contabiliza as solicitações de exames e medicamentos vindas do corpo clínico: Essas solicitações por sua vez são repassadas ao estoque.
+ 
+# Componente-conector
+ 
+## Descrição de nova-consulta
+
+Os operadores do sistema (atendentes), por meio de uma interface gráfica, se conecta com o servidor web. A partir dessa interface ela pode registrar uma nova consulta, informando os dados do paciente e seu plano de saúde. Logo em seguida essa nova consulta é validada  por meio da API de comunicação, que é implementada pelo componente comunicador, e é então gerada uma nota fiscal eletrônica e um boleto através dos serviços externos ao SISB.
+Caso os dados não sejam validados, o sistema não os armazenará no banco de dados e a operação de nova consulta deverá ser reiniciada.
+Em seguida esses dados, caso validados, serão armazenados no banco de dados, este que possui um rotina que realiza backups diários 2 vezes ao dia utilizando Machine Learning para escolher o melhor horário para tal operação evitando os horários onde houver um maior número de acessos.
+**Criador de backups** é um rotina que fica à espera do momento mais oportuno para realizar o backup dos dados em outro servidor, para que se, em uma eventual queda do sistema, os dados não sejam comprometidos.
+Visando cumprir a exigência de agilidade na resposta, que foi estipulada com um prazo máximo de até 2 horas, é possível que seja contrato um outro servidor auxiliar para armazenar neste o backup e assim manter o sistema funcional provisoriamente até que o servidor principal seja restaurado à sua eficiência habitual.
+
+## Chat
+![Chat](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/chat.png)
+Os operadores do sistema (atendentes) possuem um sistema de comunicação interno. Esse sistema é implementado por meio de uma interface gráfica, que usufrui da estrutura de um chat, integrado ao sistema. Tal comunicação é validada por meio do serviço externo Auth0 e em seguida, a mensagem é enviada ao serviço externo “Serviço de Mensagem”, onde a mesma será armazenada e encaminhada ao seu destino dentro da rede interna.
+
+## Alerta
+![Alerta](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/intera%C3%A7%C3%A3o-banc%C3%A1ria.png)
+A partir da lista de consultas, a operação de alerta, varre as consultas em busca das quais estão marcadas para daqui 3 dias a partir do dia corrente.
+A partir das informações da cada consulta especificada, o sistema de alerta se conecta  com a interface de comunicação com o e-mail institucional  e com o número oficial de telefone do SISB, que envia um e-mail de alerta e uma mensagem sms e\ou no whatsapp para cada paciente correspondente às consultas referenciadas na pesquisa de alerta.
+Após feita a notificação, o sistema de alerta, se conecta com o sistema de comunicação, que por sua vez, interage com a interface de comunicação de serviço externo Auth0, que faz a persistência das notificações exercidas no dia.           
+
+## Interação-bancária
+![Bancos](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/intera%C3%A7%C3%A3o-banc%C3%A1ria.png)
+Quando uma nova consulta é gerada o sistema realiza uma solicitação de acesso à interface de comunicação com o sistema bancário, o qual gera uma solicitação de pagamento que será enviada para o controlador de finanças.
+Quando a solicitação chega ao setor Financeiro uma nova solicitação é gerada, essa solicitação tem a finalidade de providenciar a interação entre o SISB e o gerador de NFE.
+
+## Atualização de Prontuário
+![Prontuário](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/prontu%C3%A1rio%20att.png)
+O odontólogo acessa o portal do profissional da saúde, do servidor web por meio de uma conexão TCP\IP, onde acessa as informações dos pacientes inferidos a ele.
+O cadastro dos pacientes, advém da comunicação com o barramento BSUS que o conecta com o banco de dados do SUS. 
+a situação dos pacientes do SISB,    
+
 
 
 
