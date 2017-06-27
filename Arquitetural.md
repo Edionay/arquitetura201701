@@ -82,7 +82,8 @@ De com o documento de especificação de requisitos, a arquitetura proposta deve
 - Manutenção corretiva deve ser feita em no máximo 2 dias.
 # Arquitetura proposta
 ## Visão geral em camadas
-[Descrever a imagem em proposta de arquitetura]
+![Camadas](https://github.com/Edionay/arquitetura201701/blob/master/Diagramas/VIs%C3%A3o%20geral%20em%20camadas.png?raw=true)
+[Descrição da imagem em Proposta de Arquitetura]
 
 ### Visão cliente servidor
 O SISB contará com aplicações externas nas plataformas Android e iOs e um módulo específico para um sistema baseado em Web para a execução em navegadores. 
